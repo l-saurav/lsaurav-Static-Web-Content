@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    Login
+  </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+  function validatePost() {
+    var x = document.forms["myForm"]["username"].value;
+    if (x == "") 
+        {
+        alert("Username is required");
+        return false;
+      }
+      var y = document.forms["myForm"]["password"].value;
+    if (y == "") 
+        {
+        alert("Password is required");
+        return false;
+      }
+    }
+</script>
+<style>
+.signin {
+  border: 1px solid #c6c7cc;
+  border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 440px;
+  margin-left: 34%;
+margin-right:24%;
+}
+</style>
+</head>
+<body>
+
+<div class="formstyle">
+<div class="brand_logo">Ankuram</div>
+<h1>Sign In!<span>Sign In and Start Discussion!!</span></h1>
+</div>
+
+  <form method="post" action=""  name="myForm" onsubmit="return validatePost();">
+  <fieldset>
+    <label>
+      Username
+      <input type="text" name="username">
+    </label>
+    <label>
+      Password
+      <input type="password" name="password">
+    </label>
+  </fieldset>
+  <fieldset class="account-action">
+    <input class="btn" type="submit" name="submit" value="SignIn">
+  </fieldset>
+</form>
+</div>
+<br><br>
+
+</body>
+</html>
